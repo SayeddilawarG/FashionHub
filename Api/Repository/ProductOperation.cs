@@ -78,4 +78,25 @@ public class ProductOperation : IProductOperation
             throw;
         }
     }
+
+    public Product? GetProductById(int id)
+    {
+        try
+        {
+            var getProduct = _dbContext.Products.FirstOrDefault(prodcutId => prodcutId.Id == id);
+            if (getProduct != null)
+            {
+               return getProduct;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+    }
 }

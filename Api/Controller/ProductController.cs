@@ -25,7 +25,8 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost("PostProduct")]
-    public IActionResult PostProduct([FromBody] Product product)
+    [Consumes("application/json")]
+    public IActionResult PostProduct([FromBody]Product product)
     {
         try
         {
@@ -80,5 +81,19 @@ public class ProductController : ControllerBase
             return BadRequest(ex.Message);
         }
 
+    }
+
+    [HttpGet("GetProductByIdView/{id}")]
+    public IActionResult GetProductByIdView(int id)
+    {
+        try
+        {
+            var getProduct = _IproductOperation.GetProductById(id);
+            return Ok(getProduct);  
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }

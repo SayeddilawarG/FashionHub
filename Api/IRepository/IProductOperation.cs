@@ -7,4 +7,5 @@ public interface IProductOperation
     void PostProduct(Product product);
     bool PutProduct(Product product);
     int DeleteProduct(int id);
+    Product GetProductById(int id);
 }

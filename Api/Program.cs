@@ -10,6 +10,7 @@ builder.Services.AddDbContext<DbProductContext>(options=>{
 });
 builder.Services.AddTransient<IProductOperation,ProductOperation>();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -20,6 +21,10 @@ if (app.Environment.IsDevelopment())
     // app.UseSwagger();
     // app.UseSwaggerUI();
 }
+
+app.UseCors(builder=>{
+    builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+});
 
 app.UseHttpsRedirection();
 
