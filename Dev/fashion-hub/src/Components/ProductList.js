@@ -3,9 +3,16 @@ import "./ProductList.css";
 import { FaRegEdit } from "react-icons/fa";
 import { IoEyeOutline, IoTrashOutline,IoAdd } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import ViewModel from "./ViewModel";
 
 function ProductList() {
+  const [showModel,setShowModel] = useState(false);
   const [productList,setProductList] = useState([]);
+  const [viewProduct,setViewProduct] = useState({
+    name:'',
+    description:'',
+    prize:''
+  });
   useEffect(()=>{
     GetProductList();
   },[]);
@@ -15,6 +22,17 @@ function ProductList() {
       const json = await data.json();
       setProductList(json);
   }
+  const viewProducthandle=(id)=>{
+    setShowModel(true);
+    console.log(id);
+    const product = productList.find(Id=>Id.id==id);
+    console.log('this is product', product);
+    setViewProduct(product)
+
+    console.log("THis is viw Product",viewProduct);
+  }
+
+  const closeModel = ()=>setShowModel(false);
 
   return (
     <div className="container">
@@ -46,19 +64,19 @@ function ProductList() {
               <Link to= {`/AddProduct/${product.id}`}><FaRegEdit /></Link>
               </a>{" "}
               <a>
-                <IoEyeOutline />
+                <IoEyeOutline onClick={()=>viewProducthandle(product.id)}/>
               </a>{" "}
               <a>
                 <IoTrashOutline />
               </a>
             </td>
           </tr>
-          ))}
-
-            
+          ))}   
           </tbody>
         </table>
       </div>
+
+      {showModel && <ViewModel closeModel = {closeModel} product = {viewProduct}/>}
     </div>
   );
 }
