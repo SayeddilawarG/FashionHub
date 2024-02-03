@@ -6,19 +6,21 @@
     bottom: 0;
     background-color: rgb(189,189,189,0.9);
 }
-
-h2{
-    font-size:2.4rem;
-    font-family: "Work Sans",sans-serif;
-}
-
 p{
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin: 1rem 0 2.4rem 0;
     line-height: 1.8rem;
     color: black;
     font-weight: 400;
     font-family: "Source Serif Pro",serif;
+}
+
+.view-product-heading{
+    font-size: 18px;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    text-align: center;
 }
 
 .model-container{
@@ -29,11 +31,11 @@ p{
     max-width: 30rem;
     z-index: 1;
     background-color: #fff;
-    padding: 2rem 3rem;
-    border-radius: 20px;
+    padding: 2rem 1.5rem;
 }
 .close-btn{
     background-color: #1773d5f6;
+    width: 80px;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -43,3 +45,6 @@ p{
 .model-container p {
     margin-bottom: 12px;
   }
+.view-table td{
+    padding: 5px 1px ;
+}

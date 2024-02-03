@@ -1,0 +1,40 @@
+.model-wrapper-delete{
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(189,189,189,0.9);
+}
+.model-container-delete{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 30rem;
+    z-index: 1;
+    background-color: #fff;
+    padding: 2rem 1rem;
+}
+
+.delete-btn{
+    background-color: red;
+    width: 80px;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+h3{
+    color: red;
+}
+.delete-table td{
+    padding: 5px 1px ;
+}
+.line{
+    margin-top: 5px;
+    background-color: gray;
+    height: 1px;
+    width: 100%;
+}

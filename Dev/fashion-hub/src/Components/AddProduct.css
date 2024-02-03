@@ -9,29 +9,35 @@
   form {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
   }
-
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-
   input,textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
+    padding: 15px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
   }
 
-  button {
+  .addupdate-btn {
     color: #fff;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    width: 80px;
+  }
+
+  .product-form-heading{
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #1773d5f6;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 0;
+    text-align: center;
   }

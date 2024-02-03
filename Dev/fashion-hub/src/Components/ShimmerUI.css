@@ -1,0 +1,99 @@
+.container-shimmer{
+    margin-top: 20px;
+}
+.add-btn-shimmer {
+    position: fixed;
+    left: 75.5%;
+    background-color: rgba(240, 231, 236, 0.627);
+    color: rgba(240, 231, 236, 0.627);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+table.center-shimmer{
+    background-color: rgba(240, 231, 236, 0.627);
+    color:rgba(240, 231, 236, 0.627);
+    margin-left: auto;
+    margin-right: auto;  
+    position: relative;
+    margin-top: 50px;
+}
+.table-container-shimmer {
+    max-height: 500px;
+    overflow-y: auto;
+    
+  }
+.center-shimmer{
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+.table-head-shimmer th{
+    color:rgba(240, 231, 236, 0.627);
+    background-color:  rgba(240, 231, 236, 0.627);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.center-shimmer tr{
+    padding: .45rem;
+}
+.table-head-shimmer tr{
+    color:rgba(240, 231, 236, 0.627);
+    background-color:  rgba(240, 231, 236, 0.627);
+}
+
+.table-head-shimmer th{
+    color:rgba(240, 231, 236, 0.627);
+    font-size: 1.15em;
+}
+.table-body tr:nth-child(even){
+    background-color: #eaeaea;
+}
+
+.center-shimmer th,
+.center-shimmer td{
+    font-size: 1em;
+    padding: 1em;
+    text-align: center;
+}
+.table-head-shimmer th{
+    color : #fff;
+    font-size: 1.15em;
+}
+tr td a{
+    cursor: pointer;
+    font-size: larger;
+}
+@media (max-width:640px) {
+    .center-shimmer{
+        border: 3px solid rgba(240, 231, 236, 0.627);
+    }
+    .center-shimmer .table-head-shimmer tr{
+        display: none;
+    }
+    .center-shimmer tr{
+        display: block;
+    }
+
+    .center-shimmer th, table td{
+        padding: .5em;
+    }
+    .center-shimmer td{
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+
+    .center-shimmer td::before{
+        content: attr(data-title) ": ";
+        float: left;
+    }
+    .table-body tr:nth-child(even){
+        background-color: rgba(240, 231, 236, 0.627);
+        color: #fff;
+    }
+}

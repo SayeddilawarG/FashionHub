@@ -2,8 +2,8 @@
     margin-top: 20px;
 }
 .add-btn {
-    position: fixed;
-    left: 75.5%;
+    position: sticky;
+    left: 75%;
     background-color: #1773d5f6;
     color: #fff;
     padding: 10px 15px;
@@ -15,14 +15,15 @@ table.center{
     margin-left: auto;
     margin-right: auto;  
     position: relative;
-    margin-top: 50px;
+    margin-top: 10px;
+    border: 1px solid grey;
 }
 .table-container {
     max-height: 500px;
     overflow-y: auto;
-    
+
   }
-table{
+.center{
     border-collapse: collapse;
     width: 70%;
     margin-top: 40px;
@@ -30,28 +31,23 @@ table{
 }
 thead th{
     background-color: rgb(14, 60, 65);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1;
 }
 
-table tr{
+.center tr{
     padding: .45rem;
 }
 thead tr{
     background-color: green;
 }
-
-thead th{
-    color: #fff;
-    font-size: 1.15em;
-}
 tbody tr:nth-child(even){
     background-color: #eaeaea;
 }
 
-table th,
-table td{
+.center th,
+.center td{
     font-size: 1em;
     padding: 1em;
     text-align: center;
@@ -60,34 +56,38 @@ thead th{
     color : #fff;
     font-size: 1.15em;
 }
-.Actions{
-    margin: 20px;
-}
 tr td a{
     cursor: pointer;
     font-size: larger;
 }
+
+.table-container table thead th {
+    position: sticky;
+    top: 0;
+    color: #fff;
+    font-size: 1.15em;
+  }
 @media (max-width:640px) {
-    table{
+    .center{
         border: 3px solid rgb(14, 60, 65);
     }
-    table thead tr{
+    .center thead tr{
         display: none;
     }
-    table tr{
+    .center tr{
         display: block;
     }
 
-    table th, table td{
+    .center th, table td{
         padding: .5em;
     }
-    table td{
+    .center td{
         text-align: right;
         display: block;
         font-size: 1em;
     }
 
-    table td::before{
+    .center td::before{
         content: attr(data-title) ": ";
         float: left;
     }

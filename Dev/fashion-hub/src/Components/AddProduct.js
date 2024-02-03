@@ -99,9 +99,10 @@ function AddProduct() {
   return (
     <div className="parent-container">
       <div className="form-container">
+      <h3 className="product-form-heading">Product Form</h3>
         <form>
-        {isError?<span style={{color:"red",width:"100%"}}> * {errorMessage}</span>:''}
-          <label htmlFor="productname">Name </label>
+        {isError?<span style={{color:"red",width:"100%"}}> * {errorMessage}</span>:''}<br/>
+          <label htmlFor="productname"><b>Name</b> </label>
           <input
             type="text"
             id="name"
@@ -110,7 +111,7 @@ function AddProduct() {
             value={productData.name}
             onChange={(e)=>handleData(e)}
           />
-          <label htmlFor="description">Description </label>
+          <label htmlFor="description"><b>Description</b> </label>
           <textarea
             id="description"
             name="description"
@@ -118,7 +119,7 @@ function AddProduct() {
             value={productData.description}
             onChange={(e)=>handleData(e)}
           />
-          <label htmlFor="prize">Prize </label>
+          <label htmlFor="prize"><b>Prize</b> </label>
           <input
             type="number"
             id="prize"
@@ -127,7 +128,7 @@ function AddProduct() {
             value={productData.prize}
             onChange={(e)=>handleData(e)}
           />
-          <button onClick={id !=undefined ? updateData : postData} style={{backgroundColor:"Blue"}}>{id !=undefined ? "Update" : "Add"}</button> <Link to="/"><button style={{border:"1px solid black",color:"black"}}>Back</button></Link>
+          <button className="addupdate-btn" onClick={id !=undefined ? updateData : postData} style={{backgroundColor:"#1773d5f6"}}>{id !=undefined ? "Update" : "Add"}</button> <Link to="/"><button className="addupdate-btn" style={{border:"1px solid black",color:"black"}}>Back</button></Link>
         </form> 
       </div>
     </div>
