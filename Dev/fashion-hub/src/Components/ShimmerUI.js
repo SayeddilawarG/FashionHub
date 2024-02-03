@@ -8,7 +8,7 @@ function ShimmerUI() {
   return (
     <div className="container-shimmer">
       <div className="add-table-btn">
-        <Link to="/AddProduct">
+        <Link to="/AddProduct" style={{textDecoration:"none"}}>
           <button className="add-btn-shimmer">
             {" "}
             <IoAdd /> Add Product

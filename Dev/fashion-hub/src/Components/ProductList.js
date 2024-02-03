@@ -6,12 +6,15 @@ import { Link } from "react-router-dom";
 import ViewModel from "./ViewModel";
 import DeleteModel from "./DeleteModel";
 import ShimmerUI from "./ShimmerUI";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductList() {
   const [showModel, setShowModel] = useState(false);
   const [showDeleteModel, setShowDeleteModel] = useState(false);
   const [productList, setProductList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showTaost,setShowTaost] = useState(false);
   const [viewProduct, setViewProduct] = useState({
     name: "",
     description: "",
@@ -28,14 +31,14 @@ function ProductList() {
       if (response.ok) {
         const data = await response.json();
         setProductList(data);
+        setIsLoading(false);
       }
     } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
       setIsLoading(false);
+      setShowTaost(true);
+      toast.error("Internal Server Error !")
     }
   };
-
   const viewProducthandle = (id) => {
     setShowModel(true);
     console.log(id);
@@ -59,6 +62,7 @@ function ProductList() {
 
   return (
     <div className="container">
+      {!isLoading &&
       <div className="add-table-btn">
         <Link to="/AddProduct" style={{textDecoration:"none"}}>
           <button className="add-btn">
@@ -67,9 +71,9 @@ function ProductList() {
           </button>
         </Link>
       </div>
-      
+}
       {!isLoading ?(
-      <div className="table-container">
+      <div className="table-container" style={productList.length == 0 ?{ overflow:"auto"} : {overflowy:"scroll"}}>
         <table className="center">
           <thead>
             <tr>
@@ -127,8 +131,8 @@ function ProductList() {
           getProductList={GetProductList}
         />
       )}
-
       {isLoading && <ShimmerUI/>}
+      {showTaost && <ToastContainer/>}
     </div>
   );
 }
