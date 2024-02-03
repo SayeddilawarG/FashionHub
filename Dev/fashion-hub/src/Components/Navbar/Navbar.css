@@ -1,0 +1,33 @@
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-logo img {
+  max-width: 100%;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

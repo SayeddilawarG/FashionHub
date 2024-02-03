@@ -1,7 +1,7 @@
-import AddProduct from "./Components/AddProduct";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import ProductList from "./Components/ProductList";
+import AddProduct from "./Components/AddProduct/AddProduct";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
+import ProductList from "./Components/ProductList/ProductList";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 

@@ -1,14 +1,13 @@
 import React from "react";
 import "./ShimmerUI.css";
-import { FaRegEdit } from "react-icons/fa";
-import { IoEyeOutline, IoTrashOutline,IoAdd } from "react-icons/io5";
+import { IoAdd } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 function ShimmerUI() {
   return (
     <div className="container-shimmer">
       <div className="add-table-btn">
-        <Link to="/AddProduct" style={{textDecoration:"none"}}>
+        <Link to="/AddProduct" style={{ textDecoration: "none" }}>
           <button className="add-btn-shimmer">
             {" "}
             <IoAdd /> Add Product
@@ -28,31 +27,32 @@ function ShimmerUI() {
           </thead>
           <tbody className="table-body">
             <tr>
-              <td>Sr.no</td>
-              <td>Name</td>
-              <td>Description</td>
-              <td>Prize</td>
-              <td>Actions</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>Sr.no</td>
-              <td>Name</td>
-              <td>Description</td>
-              <td>Prize</td>
-              <td>Actions</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>Sr.no</td>
-              <td>Name</td>
-              <td>Description</td>
-              <td>Prize</td>
-              <td>Actions</td>
-            </tr><tr>
-              <td>Sr.no</td>
-              <td>Name</td>
-              <td>Description</td>
-              <td>Prize</td>
-              <td>Actions</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>

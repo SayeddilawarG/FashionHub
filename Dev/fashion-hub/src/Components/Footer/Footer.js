@@ -6,7 +6,6 @@ function Footer() {
     <footer>
         &copy; 2024 Sayeddilawar Gadamphalli
     </footer>
-    
   )
 }
 export default Footer
