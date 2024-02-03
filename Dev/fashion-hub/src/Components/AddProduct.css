@@ -6,7 +6,7 @@
     margin-top: 20px;
   }
 
-  form {
+  form{
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,4 +40,11 @@
     padding: 10px;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  @media only screen and (max-width: 600px){
+    form{
+      max-width: 300px;
+      font-size: 14px;
+    }
   }

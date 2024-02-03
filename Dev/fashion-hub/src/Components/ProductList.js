@@ -60,14 +60,14 @@ function ProductList() {
   return (
     <div className="container">
       <div className="add-table-btn">
-        <Link to="/AddProduct">
+        <Link to="/AddProduct" style={{textDecoration:"none"}}>
           <button className="add-btn">
             {" "}
             <IoAdd /> Add Product
           </button>
         </Link>
       </div>
-
+      
       {!isLoading ?(
       <div className="table-container">
         <table className="center">

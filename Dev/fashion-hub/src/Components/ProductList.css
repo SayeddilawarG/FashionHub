@@ -1,99 +1,68 @@
-.container{
-    margin-top: 20px;
-}
-.add-btn {
-    position: sticky;
-    left: 75%;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .add-table-btn {
+    margin-bottom: 20px;
+  }
+  
+  .add-btn {
     background-color: #1773d5f6;
     color: #fff;
     padding: 10px 15px;
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 16px;
-  }
-table.center{
-    margin-left: auto;
-    margin-right: auto;  
-    position: relative;
-    margin-top: 10px;
-    border: 1px solid grey;
-}
-.table-container {
-    max-height: 500px;
-    overflow-y: auto;
-
-  }
-.center{
-    border-collapse: collapse;
-    width: 70%;
-    margin-top: 40px;
-    box-shadow: 0 0 5px rgba(0,0,0,.25);
-}
-thead th{
-    background-color: rgb(14, 60, 65);
-    position: relative;
-    top: 0;
-    z-index: 1;
-}
-
-.center tr{
-    padding: .45rem;
-}
-thead tr{
-    background-color: green;
-}
-tbody tr:nth-child(even){
-    background-color: #eaeaea;
-}
-
-.center th,
-.center td{
-    font-size: 1em;
-    padding: 1em;
-    text-align: center;
-}
-thead th{
-    color : #fff;
-    font-size: 1.15em;
-}
-tr td a{
     cursor: pointer;
-    font-size: larger;
-}
-
-.table-container table thead th {
-    position: sticky;
-    top: 0;
-    color: #fff;
-    font-size: 1.15em;
+    display: flex;
+    align-items: center;
+  }  
+  .table-container {
+    overflow-y: scroll;
+    height: 350px;
   }
-@media (max-width:640px) {
-    .center{
-        border: 3px solid rgb(14, 60, 65);
-    }
-    .center thead tr{
-        display: none;
-    }
-    .center tr{
-        display: block;
-    }
-
-    .center th, table td{
-        padding: .5em;
-    }
-    .center td{
-        text-align: right;
-        display: block;
-        font-size: 1em;
-    }
-
-    .center td::before{
-        content: attr(data-title) ": ";
-        float: left;
-    }
-    tbody tr:nth-child(even){
-        background-color: rgb(14, 60, 65);
-        color: #fff;
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    position: sticky;
+    top:0;
+    background-color: #f2f2f2;
+  }
+  
+  .actions a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    th, td {
+      font-size: 14px;
     }
     
-}
+    .add-btn {
+      font-size: 14px;
+    }
+    .table-container {
+        overflow-y: scroll;
+        height: 250px;
+      }
+      th {
+        position: sticky;
+        top:0;
+        background-color: #f2f2f2;
+      }
+  }
+  

@@ -1,7 +1,10 @@
 import AddProduct from "./Components/AddProduct";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import ProductList from "./Components/ProductList";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
         <Route path="/AddProduct/:id" element={<AddProduct/>} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import logo from "./Images/logo.png";
 
 function Navbar() {
   return (
-    <div className='container'>
+    <div className='navbar-container'>
       <div className='Navbar'>
       <div className='nav-logo'>
         <img src={logo} alt="Fashion Hub"/>
