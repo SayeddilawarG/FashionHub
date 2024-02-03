@@ -28,4 +28,17 @@ Install below packages using this command **dotnet add package <PACKAGE_NAME>**
 5) Open api folder in visual studio code and Run the Api using **<path>\FashionHub\Api>dotnet run**
 6) Open the Dev folder in visual studio code and Run the FrontEnd - **FashionHub\Dev\fashion-hub>npm start**
 
+# Images 
+1) Product List -
+![image](https://github.com/SayeddilawarG/FashionHub/assets/108809562/26d54105-41b6-4149-ac93-14e94eed784c)
+
+2) ‎View Product -
+![image](https://github.com/SayeddilawarG/FashionHub/assets/108809562/dc6ef774-01d3-4620-9e7a-a3b10c72667a)
+
+3) Delete Product -
+![image](https://github.com/SayeddilawarG/FashionHub/assets/108809562/5f2cb8fa-6d98-4017-a6c8-14015ee83b79)
+
+4) Edit Product -
+![image](https://github.com/SayeddilawarG/FashionHub/assets/108809562/ca498294-27b2-4e5b-ab5a-a2f106a3c67d)
+
 
